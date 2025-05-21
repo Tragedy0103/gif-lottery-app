@@ -1,5 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import result1 from './assets/result1.png';
+import result2 from './assets/result2.png';
+import result3 from './assets/result3.png';
 
 // 狀態管理
 const showLaunchScreen = ref(true);
@@ -10,9 +13,9 @@ const currentResult = ref(null);
 // 抽獎結果與機率設定
 // 格式: { gif: 圖片路徑, probability: 機率權重 }
 const resultOptions = [
-  { gif: `${import.meta.env.BASE_URL}src/assets/result1.png`, probability: 50  },
-  { gif: `${import.meta.env.BASE_URL}src/assets/result2.png`, probability: 30 },
-  { gif: `${import.meta.env.BASE_URL}src/assets/result3.png`, probability: 20 }
+  { gif: result1, probability: 50  },
+  { gif: result2, probability: 30 },
+  { gif: result3, probability: 20 }
 ];
 
 // 計算總權重
