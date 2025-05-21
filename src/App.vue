@@ -10,9 +10,9 @@ const currentResult = ref(null);
 // 抽獎結果與機率設定
 // 格式: { gif: 圖片路徑, probability: 機率權重 }
 const resultOptions = [
-  { gif: '/gifs/result1.png', probability: 50  },
-  { gif: '/gifs/result2.png', probability: 30 },
-  { gif: '/gifs/result3.png', probability: 20 }
+  { gif: `${import.meta.env.BASE_URL}src/assets/result1.png`, probability: 50  },
+  { gif: `${import.meta.env.BASE_URL}src/assets/result2.png`, probability: 30 },
+  { gif: `${import.meta.env.BASE_URL}src/assets/result3.png`, probability: 20 }
 ];
 
 // 計算總權重
@@ -51,7 +51,7 @@ const startLottery = () => {
   <div class="lottery-container">
     <!-- 啟動畫面 -->
     <div v-if="showLaunchScreen" class="screen launch-screen">
-      <img src="/gifs/launch.gif" alt="Launch Screen" class="gif-image">
+      <img src="/src/assets/launch.gif" alt="Launch Screen" class="gif-image">
       <div class="loading-text">載入中...</div>
     </div>
     
@@ -59,7 +59,7 @@ const startLottery = () => {
     <div v-if="showMainScreen" class="screen main-screen">
       <h1>點擊下方圖片進行抽獎</h1>
       <div class="gif-container" @click="startLottery">
-        <img src="/gifs/main.gif" alt="Click to start" class="gif-image clickable">
+        <img src="/src/assets/main.gif" alt="Click to start" class="gif-image clickable">
       </div>
       <div class="instruction">點擊圖片抽獎</div>
     </div>
