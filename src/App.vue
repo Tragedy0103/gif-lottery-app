@@ -52,7 +52,6 @@ const startLottery = () => {
     <!-- 啟動畫面 -->
     <div v-if="showLaunchScreen" class="screen launch-screen">
       <img src="/src/assets/launch.gif" alt="Launch Screen" class="gif-image">
-      <div class="loading-text">載入中...</div>
     </div>
     
     <!-- 主抽獎畫面 -->
@@ -139,13 +138,6 @@ body {
   justify-content: center;
 }
 
-.loading-text {
-  color: white;
-  margin-top: 20px;
-  font-size: 24px;
-  animation: pulse 1.5s infinite;
-}
-
 @keyframes pulse {
   0% { opacity: 0.5; }
   50% { opacity: 1; }
@@ -190,10 +182,6 @@ h1 {
   .gif-image {
     max-height: 50vh;
   }
-  
-  .loading-text {
-    font-size: 20px;
-  }
-  
+
 }
 </style>
